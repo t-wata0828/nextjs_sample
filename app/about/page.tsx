@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import AboutHeader from "./AboutHeader";
+import Button from "@mui/material/Button";
 
 export default function About() {
   const [count, setCount] = useState(0);
@@ -23,9 +24,15 @@ export default function About() {
       <br />
       <br />
       <p>カウント: {count}</p>
-      <button onClick={increment}>プラス</button>
-      <button onClick={decrement}>マイナス</button>
-      <button onClick={reset}>リセット</button>
+      <Button variant="contained" onClick={increment} sx={{ mr: 2 }}>
+        プラス
+      </Button>
+      <Button variant="contained" onClick={decrement} sx={{ mr: 2 }}>
+        マイナス
+      </Button>
+      <Button variant="outlined" onClick={reset}>
+        リセット
+      </Button>
     </div>
   );
 }
